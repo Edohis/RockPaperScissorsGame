@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------------
+## Vars
+--------------------------------------------------------------------*/
+
+:root {
+  --font-family-primary: 'Roboto', sans-serif;
+  --font-family-title-site: 'Raleway', sans-serif;
+  --font-family-title-major: 'Merriweather', serif;
+  --font-family-second: 'Reem Kufi Fun', sans-serif;
+  --font-family-who-turn: 'Aref Ruqaa Ink', serif;
+  --font-family-screen-pmay: 'Reem Kufi Fun', sans-serif;
+  --font-family-box-item: 'Aref Ruqaa Ink', serif;
+  --font-family-tile-section-sub: 'Aref Ruqaa Ink', sans-serif;
+  --font-family-end-result: 'Aref Ruqaa Ink', serif;
+  
+  /*
+  font-family: 'Aref Ruqaa Ink', serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Merriweather', serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Reem Kufi Fun', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  */
+  
+  --cubic: cubic-bezier(.46, -.41, .3, 1.52);
+}
+
+body {
+  /** base **/
+  --bg-primary: rgb(255, 255, 255);
+  --color-primary: rgb(0, 0, 0);
+  --outline-major: rgb(31, 99, 189);
+  --box-shadow-major: rgba(0, 0, 0, .2);
+  
+  /** section **/
+  --bg-section-screen: rgb(255, 250, 231);
+  --bc-section-screen: rgb(255, 222, 0);
+  
+  /** box **/
+  --bc-box: rgb(210, 0, 26);
+  --bc-data: transparent;
+  --bc-header-screen: transparent;
+  
+  /** btn **/
+  --bc-btn: rgb(210, 0, 26);
+}

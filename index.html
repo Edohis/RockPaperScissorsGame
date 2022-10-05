@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Rock Paper Scissors | Christopher Rieffel</title>
+  
+  <!--* Google Fonts *-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reem+Kufi+Fun:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap">
+  
+  <!--* Vendor CSS Files *-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  
+  <!--* Main CSS Files *-->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/vars.css" />
+  <link rel="stylesheet" href="assets/css/general.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <!--* Vendor JS Files *-->
+  <script src="https://kit.fontawesome.com/b8af886c75.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous" defer></script>
+  
+  <!--* Main JS Files *-->
+  <script src="assets/js/shortcut.js"></script>
+  <script src="assets/js/main.js" defer></script>
+  
+</head>
+
+<body>
+
+  <header id="Header" class="header header-main header-home">
+    <!-- title -->
+    <div id="HeaderTitle" class="header-title">
+      <h1>
+        <span data-i18n-key="Rock"></span>
+        <span data-i18n-key="Paper"></span>
+        <span data-i18n-key="Scissors"></span>
+      </h1>
+    </div>
+    <!-- desc -->
+    <div id="HeaderDesc" class="header-desc">
+      <p data-i18n-key="TheClassicGame"></p>
+    </div>
+    <!-- back home -->
+    <div id="HeaderBack" class="header-back">
+      <button id="BtnBackHome" type="button" class="btn btn-back">
+        <i class="fa-solid fa-arrow-left" data-icon-side="left"></i>
+        <span data-i18n-key="Back"></span>
+      </button>
+    </div>
+    <!-- start --->
+    <div id="HeaderStart" class="header-start">
+      <button id="BtnStartGame" type="button" class="btn btn-home" data-i18n-key="Start"></button>
+    </div>
+    <!-- btn go to language --->
+    <div id="HeaderBtnGoLang" class="header-lang">
+      <button id="BtnLang" type="button" class="btn btn-home" data-i18n-key="ChooseLanguage"></button>
+    </div>
+    <!-- language -->
+    <div id="HeaderLanguage" class="header-language header-screen hidden">
+      <h2 data-i18n-key="ChooseYourLanguage"></h2>
+      <div class="screen-content d-flex flex-row flex-wrap justify-content-evenly">
+        <button id="BtnLangFr" type="button" class="btn btn-actions" data-lang="fr">
+          <i class="fa-solid fa-language" data-icon-side="top"></i>
+          <span>Français</span>
+        </button>
+        <button id="BtnLangEn" type="button" class="btn btn-actions" data-lang="en">
+          <i class="fa-solid fa-language" data-icon-side="top"></i>
+          <span>English</span>
+        </button>
+      </div>
+    </div>
+    <!-- round -->
+    <div id="HeaderRound" class="header-round header-screen hidden">
+      <h2>
+        <span data-i18n-key="HowManyRounds"></span>
+        <span data-i18n-key="WouldYouLikeToPlay"></span>
+      </h2>
+      <div class="screen-content d-flex flex-row flex-wrap justify-content-evenly">
+        <button id="BtnRound3" type="button" class="btn btn-actions" data-round="3">3</button>
+        <button id="BtnRound5" type="button" class="btn btn-actions" data-round="5">5</button>
+        <button id="BtnRound10" type="button" class="btn btn-actions" data-round="10">10</button>
+        <button id="BtnRound15" type="button" class="btn btn-actions" data-round="15">15</button>
+        <button id="BtnRound20" type="button" class="btn btn-actions" data-round="20">20</button>
+        <button id="BtnRound15" type="button" class="btn btn-actions" data-round="Unlimited" data-i18n-key="Unlimited"></button>
+      </div>
+    </div>
+    </div>
+  </header>
+  
+  <main class="hidden">
+  
+    <section id="GameArea" class="section section-play hidden">
+      <!-- score -->
+      <div id="GameAreaScore" class="section-screen screen-score hidden">
+        <div class="section-screen-head">
+          <h2 data-i18n-key="Score"></h2>
+          <button id="BtnShowPlay" type="button" class="btn btn-screen" data-i18n-key="Play"></button>
+        </div>
+        <div class="section-screen-content">
+          <div class="box">
+            <div class="box-item">
+              <span id="ScoreTxtA"></span>
+              <span id="ScoreCurrA" class="stats"></span>
+            </div>
+            <div class="box-item">
+              <span id="ScoreTxtB"></span>
+              <span id="ScoreCurrB" class="stats"></span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-item">
+              <span data-i18n-key="Draw"></span>
+              <span id="ScoreCurrDraw" class="stats"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- play area -->
+      <div id="GameAreaPlay" class="section-screen screen-play hidden">
+        <div class="section-screen-head">
+          <h2>
+            <span data-i18n-key="Round"></span> <span class="round-cur"></span>/<span class="round-total"></span>
+          </h2>
+          <button id="BtnShowScore" type="button" class="btn btn-screen" data-i18n-key="Score"></button>
+        </div>
+        <div class="section-screen-content">
+          <!-- result -->
+          <div id="GameAreaPlayResult" class="section-sub section-screen-result hidden">
+            <h2 data-i18n-key="Result"></h2>
+            <div class="box">
+              <div id="BoxPlayerA" class="box-item">
+                <span id="LabelA"></span>
+                <div class="stats stats-result">
+                  <i id="ChooseIconA" class=""></i>
+                  <span id="ChooseA" class=""></span>
+                </div>
+              </div>
+              <div class="box-item item-vs">
+                <span>VS</span>
+              </div>
+              <div id="BoxPlayerB" class="box-item">
+                <span id="LabelB"></span>
+                <div class="stats stats-result">
+                  <i id="ChooseIconB"class=""></i>
+                  <span id="ChooseB" class=""></span>
+                </div>
+              </div>
+            </div>
+            <p id="" class="result-msg"></p>
+            <div class="result-btns">
+              <button id="ResultBtnContinue" type="button" class="btn btn-actions">
+                Continue
+              </button>
+              <button id="ResultBtnStop" type="button" class="btn btn-actions">
+                Stop
+              </button>
+            </div>
+          </div>
+          <!-- whose turn -->
+          <div id="GameAreaPlayWhoseTurn" class="section-sub section-screen-turn hidden">
+            <h2 id="WhoseTurnTitle"></h2>
+            <button id="BtnWhoseTurnContinue" type="button" class="btn btn-actions" data-i18n-key="ItsMeContinue">
+              It's me. Continue.
+            </button>
+          </div>
+          <!-- choose -->
+          <div id="GameAreaPlayChoose" class="section-sub section-screen-choose hidden"> 
+            <h2 data-i18n-key="ChooseYourAction"></h2>
+            <div>
+              <button id="BtnChooseActionRock" type="button" class="btn btn-game" data-play="Rock">
+                <i class="fa-solid fa-hand-back-fist"></i>
+                <span class="" data-i18n-key="ActRock"></span>
+              </button>
+              <button id="BtnChooseActionPaper" type="button" class="btn btn-game" data-play="Paper">
+                <i class="fa-solid fa-hand"></i>
+                <span class="" data-i18n-key="ActPaper"></span>
+              </button>
+              <button id="BtnChooseActionScissors" type="button" class="btn btn-game" data-play="Scissors">
+                <i class="fa-solid fa-hand-scissors"></i>
+                <span class="" data-i18n-key="ActScissors"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="PlayEnd" class="section section-end hidden">
+      <div id="PlayEndScreen" class="section-screen screen-continue">
+         <div class="section-screen-head">
+           <h2 data-i18n-key="End"></h2>
+         </div>
+         <div class="section-screen-content">
+           <p id="PlayEndMsg" class="end-result"></p>
+           <h2 data-i18n-key="WouldYouLikeARemarch"></h2>
+           <button id="PlayEndRestart" type="button" class="btn btn-actions" data-i18n-key="Restart"></button>
+         </div>
+    </section>
+  </main>
+  
+  <footer id="Footer" class="footer">
+    <p class="copyright">&copy; 2022 - Christopher Rieffel</p>
+    <div class="dropstart">
+      <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        More
+      </button>
+      <ul class="dropdown-menu">
+        <li><h6 class="dropdown-header">Pages</h6></li>
+        <li><a class="dropdown-item" href="#">Help</a></li>
+        <li><a class="dropdown-item" href="#">Privacy policy</a></li>
+        <!--<li><hr class="dropdown-divider"></li>-->
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
